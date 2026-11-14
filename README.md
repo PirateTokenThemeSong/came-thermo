@@ -57,22 +57,49 @@ The config flow asks for four values:
 | **OAuth client ID** | Read from the official CAME Connect web app (see below) |
 | **OAuth client secret** | Read from the same place |
 
-CAME publishes no developer portal, so the integration has to use the OAuth
-client of CAME's own web app. Those two values are **not** shipped with this
-integration — you read them out of the web app yourself, which takes a minute:
-
-1. Open `https://www.cameconnect.net` in a desktop browser
-2. Open DevTools → Network, then log in normally
-3. Find the request to `https://app.cameconnect.net/api/oauth/auth-code`
-4. Look at the bundle `main.<hash>.js` (DevTools → Sources, or the page source)
-   and search for `clientId:` and `clientSecret:`
-5. Paste both into the integration form
-
-If CAME rotates those values, re-read them and update the integration options.
-If the account has more than one thermostat you pick which one to add.
+The OAuth client ID and secret are **not** shipped with this integration — you
+extract them from the official web app yourself, as described below. If the
+account has more than one thermostat you pick which one to add.
 
 Use **Configure** on the integration to change the fallback polling interval
 (default 120 s) or update any of the credentials.
+
+## 🔑 How to Obtain Client ID and Client Secret
+
+CAME does not provide a public developer portal. Instead, we reuse the same
+OAuth client credentials that the web app uses. You can extract them yourself:
+
+1. Open [https://app.cameconnect.net](https://app.cameconnect.net) in a desktop
+   browser but **don't** log in yet.
+2. Open your browser's **Developer Tools → Network** tab.
+3. **Log in** to the web application.
+4. Look for a request to an endpoint like:
+
+   ```
+   https://auth.cameconnect.net/oauth/token
+   ```
+
+5. Select that request and look at the **Request Headers**.
+6. Find the header:
+
+   ```
+   Authorization: Basic
+   ```
+
+7. Copy the `<long-base64-string>` part and decode it from Base64 (many online
+   tools e.g. [https://www.base64decode.org](https://www.base64decode.org) or
+   `base64 -d` in a terminal).
+   The result will be:
+
+   ```
+   clientId:clientSecret
+   ```
+
+8. Use those two values when configuring the integration.
+
+> ⚠️ **Note:** These values are not officially documented and may change if CAME
+> rotates or replaces them. If the integration suddenly fails, repeat the steps
+> above to extract new values.
 
 ## How the API works
 
