@@ -1,0 +1,156 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "CAME Connect account",
+        "description": "Sign in with the same account you use in the CAME Connect app. The OAuth client ID and secret come from the official web app; see the README for how to read them out of it (they are not shipped with this integration).",
+        "data": {
+          "username": "Username",
+          "password": "Password",
+          "client_id": "OAuth client ID",
+          "client_secret": "OAuth client secret"
+        }
+      },
+      "device": {
+        "title": "Select thermostat",
+        "description": "More than one thermostat was found on this account.",
+        "data": {
+          "keycode": "Thermostat"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Cannot reach CAME Connect.",
+      "no_devices": "No thermostat found on this account.",
+      "unknown": "Unexpected error.",
+      "missing_client": "Enter the CAME Connect client ID and client secret (see README)."
+    },
+    "abort": {
+      "already_configured": "This thermostat is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "CAME Thermostat options",
+        "description": "Live WebSocket updates are used automatically. Leave the password empty to keep the current one.",
+        "data": {
+          "scan_interval": "Fallback polling interval (seconds)",
+          "username": "Username",
+          "password": "Password",
+          "client_id": "OAuth client ID",
+          "client_secret": "OAuth client secret"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Cannot reach CAME Connect.",
+      "missing_client": "Enter the CAME Connect client ID and client secret (see README)."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "relay_active": {
+        "name": "Relay active"
+      },
+      "online": {
+        "name": "Online"
+      }
+    },
+    "sensor": {
+      "device_mode": {
+        "name": "Operating mode",
+        "state": {
+          "off": "Off",
+          "manual": "Manual",
+          "auto": "Automatic",
+          "temp_man": "Timed manual",
+          "jolly": "Jolly",
+          "boost": "Boost",
+          "holiday": "Holiday"
+        }
+      },
+      "season": {
+        "name": "Season",
+        "state": {
+          "winter": "Winter",
+          "summer": "Summer",
+          "antifreeze": "Antifreeze",
+          "off": "Off"
+        }
+      },
+      "active_setpoint": {
+        "name": "Active setpoint"
+      },
+      "antifreeze_temperature": {
+        "name": "Antifreeze temperature"
+      },
+      "frost_free_temperature": {
+        "name": "Frost-free level"
+      },
+      "comfort_temperature": {
+        "name": "Comfort level"
+      },
+      "economy_temperature": {
+        "name": "Economy level"
+      }
+    },
+    "number": {
+      "manual_setpoint": {
+        "name": "Manual setpoint"
+      },
+      "antifreeze_setpoint": {
+        "name": "Antifreeze setpoint"
+      },
+      "temperature_offset": {
+        "name": "Measured temperature offset"
+      },
+      "differential": {
+        "name": "Differential"
+      },
+      "winter_frost_free": {
+        "name": "Winter frost-free level"
+      },
+      "winter_comfort": {
+        "name": "Winter comfort level"
+      },
+      "winter_economy": {
+        "name": "Winter economy level"
+      },
+      "summer_frost_free": {
+        "name": "Summer frost-free level"
+      },
+      "summer_comfort": {
+        "name": "Summer comfort level"
+      },
+      "summer_economy": {
+        "name": "Summer economy level"
+      }
+    },
+    "select": {
+      "operating_mode": {
+        "name": "Operating mode",
+        "state": {
+          "off": "Off",
+          "manual": "Manual",
+          "auto": "Automatic",
+          "temp_man": "Timed manual",
+          "jolly": "Jolly",
+          "boost": "Boost",
+          "holiday": "Holiday"
+        }
+      },
+      "season_select": {
+        "name": "Season",
+        "state": {
+          "winter": "Winter",
+          "summer": "Summer",
+          "antifreeze": "Antifreeze",
+          "off": "Off"
+        }
+      }
+    }
+  }
+}
