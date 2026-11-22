@@ -104,3 +104,9 @@ After **every** change:
 3. push to `origin master`.
 
 Do not batch unrelated work; do not leave the tree dirty when you stop.
+
+This repo is configured locally for the `PirateTokenThemeSong` account:
+`user.name`, `user.email`, the token store for `origin`, and
+`commit.gpgsign=false`. Signing is off on purpose — that account has no signing
+key registered and the global GPG key belongs to a different identity, so do not
+re-enable global signing here.
