@@ -43,7 +43,10 @@ async def main() -> int:
         print("Set CAME_USERNAME and CAME_PASSWORD.")
         return 1
     if not client_id or not client_secret:
-        print("Set CAME_CLIENT_ID and CAME_CLIENT_SECRET too (see README).")
+        print(
+            "Set CAME_CLIENT_ID and CAME_CLIENT_SECRET too "
+            "(see docs/getting-started.md)."
+        )
         return 1
 
     async with ClientSession() as session:

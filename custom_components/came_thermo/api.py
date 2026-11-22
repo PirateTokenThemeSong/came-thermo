@@ -42,7 +42,8 @@ THERMO_BASE = "https://thermo.cameconnect.net"
 THERMO_WS = "wss://thermo.cameconnect.net:8443/WebSocket"
 
 # The OAuth client of the official web app. CAME publishes no developer portal, so
-# the identity of their own app has to be supplied by each user (see README). There
+# the identity of their own app has to be supplied by each user (see
+# docs/getting-started.md). There
 # is deliberately no hard-coded default here.
 DEFAULT_CLIENT_ID = ""
 DEFAULT_CLIENT_SECRET = ""
@@ -86,7 +87,8 @@ class CameThermoAuth:
         if not self._client_id or not self._client_secret:
             raise CameAuthError(
                 "no OAuth client configured: set the CAME Connect client_id and "
-                "client_secret in the integration options (see README)"
+                "client_secret in the integration options (see "
+                "docs/getting-started.md)"
             )
 
     @property

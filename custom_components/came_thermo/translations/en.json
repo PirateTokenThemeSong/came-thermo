@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "CAME Connect account",
-        "description": "Sign in with the same account you use in the CAME Connect app. The OAuth client ID and secret come from the official web app; see the README for how to read them out of it (they are not shipped with this integration).",
+        "description": "Sign in with the same account you use in the CAME Connect app. The OAuth client ID and secret come from the official web app; see docs/getting-started.md in the repository for how to read them out (they are not shipped with this integration).",
         "data": {
           "username": "Username",
           "password": "Password",
@@ -24,7 +24,7 @@
       "cannot_connect": "Cannot reach CAME Connect.",
       "no_devices": "No thermostat found on this account.",
       "unknown": "Unexpected error.",
-      "missing_client": "Enter the CAME Connect client ID and client secret (see README)."
+      "missing_client": "Enter the CAME Connect client ID and client secret (see docs/getting-started.md)."
     },
     "abort": {
       "already_configured": "This thermostat is already configured."
@@ -47,7 +47,7 @@
     "error": {
       "invalid_auth": "Invalid username or password.",
       "cannot_connect": "Cannot reach CAME Connect.",
-      "missing_client": "Enter the CAME Connect client ID and client secret (see README)."
+      "missing_client": "Enter the CAME Connect client ID and client secret (see docs/getting-started.md)."
     }
   },
   "entity": {
