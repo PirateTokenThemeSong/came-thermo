@@ -78,6 +78,21 @@ run without Home Assistant. `came_probe.py` adds `custom_components` to
    `translations/en.json`.
 5. Extend the entity table in `docs/entities.md`.
 
+## Logo
+
+`assets/icon.svg` and its PNG exports, plus
+`custom_components/came_thermo/brand/icon*.png`, are generated from the CAME app
+icon:
+
+```powershell
+python -m pip install opencv-python numpy Pillow
+python tools/make_logo.py
+```
+
+The source raster is cached as `original.webp` (gitignored); delete it to
+download it again. The script recolours the artwork to white on Home Assistant
+blue `#18BCF2`.
+
 ## Release / HACS
 
 - `hacs.json`: `render_readme: true` (so the README is the HACS page — keep it

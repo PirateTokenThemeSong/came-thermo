@@ -15,3 +15,6 @@ tools/device.json
 .idea/
 .DS_Store
 Thumbs.db
+
+# Logo source cache (see tools/make_logo.py)
+original.webp
