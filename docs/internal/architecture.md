@@ -3,7 +3,7 @@
 ## Shape
 
 ```
-came-thermo/
+came-thermo-ha/
   custom_components/came_thermo/
     __init__.py        config entry setup/unload, platform forwarding
     api.py             async cloud client: OAuth + thermostat REST + WS URL

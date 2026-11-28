@@ -12,7 +12,7 @@ credentials from CAME's web app, then add the integration.
 ### HACS
 
 1. HACS → Integrations → ⋮ → **Custom repositories**.
-2. Add `https://github.com/PirateTokenThemeSong/came-thermo`, category
+2. Add `https://github.com/PirateTokenThemeSong/came-thermo-ha`, category
    **Integration**.
 3. Install **CAME Thermostat** and restart Home Assistant.
 

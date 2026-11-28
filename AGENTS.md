@@ -2,7 +2,7 @@
 
 ## What this is
 
-`came-thermo` — unofficial Home Assistant integration for CAME Wi-Fi
+`came-thermo-ha` — unofficial Home Assistant integration for CAME Wi-Fi
 chronothermostats (TH/550, TH/500 and siblings) through the CAME Connect cloud.
 Pure Python on top of Home Assistant helpers (no extra `requirements`), speaking
 the private API of the official web app, reverse engineered by hand.
